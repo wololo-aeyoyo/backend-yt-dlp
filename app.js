@@ -5,7 +5,8 @@ const
 
 
 const 
-    root = require('./core/resources/root/rootRouter');
+    root = require('./core/resources/root/rootRouter'),
+    ytDlp = require('./core/resources/yt-dlp/yt-dlpRouter');
 
 
 
@@ -27,6 +28,7 @@ app.set('view engine', 'pug');
 
 //endpoints
 app.use('/', root);
+app.use('/yt_dlp',ytDlp);
 
 
 module.exports = app;
